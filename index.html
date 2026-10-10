@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mi Entreno</title>
+  <meta name="description" content="Registro personal de entrenamiento y composición corporal. Funciona sin internet.">
+  <!-- Datos para instalar la app (PWA) -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#F2F4F3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F1413" media="(prefers-color-scheme: dark)">
+  <!-- iPhone: ícono y modo pantalla completa -->
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mi Entreno">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Aquí se dibuja cada pantalla desde app.js -->
+  <main id="contenido" class="contenido"></main>
+
+  <!-- Aviso flotante -->
+  <div id="aviso" class="aviso" role="status" aria-live="polite" hidden></div>
+
+  <!-- Navegación inferior -->
+  <nav class="navegacion" aria-label="Secciones">
+    <button data-vista="hoy"><span class="ico" aria-hidden="true">●</span>Hoy</button>
+    <button data-vista="plan"><span class="ico" aria-hidden="true">≡</span>Mi plan</button>
+    <button data-vista="progreso"><span class="ico" aria-hidden="true">↗</span>Progreso</button>
+    <button data-vista="cuerpo"><span class="ico" aria-hidden="true">◐</span>Cuerpo</button>
+    <button data-vista="ajustes"><span class="ico" aria-hidden="true">⚙</span>Ajustes</button>
+  </nav>
+
+  <script src="db.js"></script>
+  <script src="graficas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
